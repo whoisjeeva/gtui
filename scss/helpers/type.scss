@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css?family=Oswald:300,400,600,700&display=swap');
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+
+
+body {
+    font-family: "Oswald", sans-serif;
+}
+
+* {
+    outline: none;
+}
+
+input, textarea, select {
+    font-family: "Oswald", sans-serif;
+    font-size: 1.1rem;
+}
+
+button {
+    font-size: 1.1rem;
+    font-family: "Oswald", sans-serif;
+    letter-spacing: 0.1rem;
+}
+
+.icon {
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;  /* Preferred icon size */
+    display: inline-block;
+    line-height: 1;
+    text-transform: none;
+    letter-spacing: normal;
+    word-wrap: normal;
+    white-space: nowrap;
+    direction: ltr;
+  
+    /* Support for all WebKit browsers. */
+    -webkit-font-smoothing: antialiased;
+    /* Support for Safari and Chrome. */
+    text-rendering: optimizeLegibility;
+  
+    /* Support for Firefox. */
+    -moz-osx-font-smoothing: grayscale;
+  
+    /* Support for IE. */
+    font-feature-settings: 'liga';
+  }

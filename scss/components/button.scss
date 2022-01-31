@@ -1,0 +1,43 @@
+.gt.btn {
+    background-color: $color-gray;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+    text-transform: uppercase;
+    display: inline-flex;
+    color: $color-text;
+
+    &.rounded {
+        border-radius: 50px;
+    }
+
+    &.outlined {
+        background-color: transparent;
+        border: 1px solid lighten($color-text, 20%);
+
+        &:hover {
+            background-color: transparent;
+            border-color: darken($color-text, 20%);
+        }
+    }
+
+    &.primary {
+        background-color: $color-accent;
+        color: $color-primary-btn-fg;
+
+        &:hover {
+            transition: background-color 0.2s ease-in-out;
+            background-color: darken($color-accent, 5%);
+        }
+    }
+
+    &:hover {
+        transition: background-color 0.2s ease-in-out;
+        background-color: darken($color-gray, 5%);
+    }
+
+    .icon {
+        margin-right: 10px;
+    }
+}
