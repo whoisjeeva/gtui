@@ -9,6 +9,8 @@ We have many pre made components that you can use on your websites.
 
 ### Button
 
+The icons are from Material Icons.
+
 ```
 <button class="gt btn">Button</button>
 <button class="gt btn rounded">Rounded</button>
@@ -18,4 +20,31 @@ We have many pre made components that you can use on your websites.
 <button class="gt btn primary"><i class="icon">download</i> Download</button>
 ```
 
-The icons are from Material Icons.
+### Input
+
+```
+<div class="gt input outlined">
+    <i class="icon">search</i>
+    <input type="text" placeholder="Search...">
+</div>
+```
+
+
+### File Input
+
+```
+<div class="gt file-input">
+    <i class="icon">upload_file</i>
+    <p>Drag and drop an image file or click to choose</p>
+    <p>No max file size</p>            
+</div>
+```
+
+```
+let fileInput = new FileInput()
+fileInput.initialize(".gt.file-input", isMultiple = true)
+fileInput.onSelect(files => {
+    fileInput.fileToBase64(files[0])
+        .then(data => console.log(data))
+})
+```

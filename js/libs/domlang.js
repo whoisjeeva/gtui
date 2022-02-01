@@ -731,8 +731,8 @@ class DOMLang {
             });
             
             for (let j = 0; j < events.length; j++) {
-                this.addEventListener(events[j].trim(), function() {
-                    callback.call(_(this));
+                this.addEventListener(events[j].trim(), function(e) {
+                    callback.call(_(this), e);
                 }, false);
             }
         });
@@ -961,4 +961,4 @@ _.plugin = function(name, callback) {
 };
 
 
-export default _
+export { _ }

@@ -1,0 +1,28 @@
+.gt.file-input {
+    padding: 40px 20px;
+    border: 2px dashed $color-text;
+    width: 100%;
+    font-size: 2rem;
+    cursor: pointer;
+    color: $color-text;
+
+    p {
+        margin: 0;
+        color: inherit;
+    }
+
+    .icon {
+        color: inherit;
+        font-size: 5rem;
+    }
+
+    p:last-child {
+        opacity: .5;
+        font-size: 1.5rem;
+    }
+
+    &.active {
+        border-color: $color-accent;
+        color: $color-accent;
+    }
+}

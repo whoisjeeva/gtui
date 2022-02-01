@@ -27,11 +27,22 @@
     <link rel="stylesheet" href="dist/css/gtui.min.css">
 </head>
 <body>
-    <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);text-align: center;">
-        <div class="gt input outlined">
-            <i class="icon">search</i>
-            <input type="text" placeholder="Search...">
+    <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);text-align: center;width: 90%;">
+        <div class="gt file-input">
+            <i class="icon">upload_file</i>
+            <p>Drag and drop an image file or click to choose</p>
+            <p>No max file size</p>            
         </div>
     </div>
+
+    <script src="dist/js/gtui.min.js"></script>
+    <script>
+        let fileInput = new FileInput()
+        fileInput.initialize(".gt.file-input", isMultiple = true)
+        fileInput.onSelect(files => {
+            fileInput.fileToBase64(files[0])
+                .then(data => console.log(data))
+        })
+    </script>
 </body>
 </html>
