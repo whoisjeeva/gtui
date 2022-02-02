@@ -3,8 +3,11 @@
 @import "./helpers/type.scss";
 @import "./helpers/base.scss";
 
+/* Layouts */
+@import "./layouts/grid.scss";
 
 /* Components */
 @import "./components/button.scss";
 @import "./components/input.scss";
 @import "./components/file_input.scss";
+@import "./components/card.scss";

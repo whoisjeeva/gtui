@@ -1,0 +1,21 @@
+.gt.column {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+
+    &.space-between {
+        justify-content: space-between;
+    }
+}
+
+.gt.row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+
+    &.space-between {
+        justify-content: space-between;
+    }
+}

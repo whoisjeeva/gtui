@@ -26,23 +26,24 @@
 
     <link rel="stylesheet" href="dist/css/gtui.min.css">
 </head>
-<body>
+<body style="background-color: #F3F4F6;">
     <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);text-align: center;width: 90%;">
-        <div class="gt file-input">
-            <i class="icon">upload_file</i>
-            <p>Drag and drop an image file or click to choose</p>
-            <p>No max file size</p>            
+        <div class="gt card" style="width: 280px">
+            <img style="padding: 24px 24px 0px 24px;" src="https://scontent-frx5-2.xx.fbcdn.net/v/t1.6435-9/p75x225/120195241_100755238470158_7699068114533862023_n.png?_nc_cat=109&ccb=1-5&_nc_sid=09cbfe&_nc_ohc=vBEOKW8IVsQAX9KTwzJ&_nc_ht=scontent-frx5-2.xx&oh=00_AT9ncM5db9WDfI5NP8zRNH-gCogA1EfA-btDmSWUr7AzLQ&oe=621D8F16">
+
+            <div class="gt row space-between" style="padding: 10px 24px;border-bottom: 1px solid #eee;">
+                <h3>Hello, World</h3>
+                <div class="gt tag">png</div>
+            </div>
+
+            <div style="padding: 0 24px 24px 24px;">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit veniam voluptatum nobis voluptatibus facilis fugiat praesentium asperiores assumenda, id fuga. Quidem nemo quibusdam architecto cum perspiciatis ab molestias accusamus aspernatur!</p>
+
+                <button class="gt btn flat"><i class="icon">download</i></button>
+            </div>
         </div>
     </div>
 
     <script src="dist/js/gtui.min.js"></script>
-    <script>
-        let fileInput = new FileInput()
-        fileInput.initialize(".gt.file-input", isMultiple = true)
-        fileInput.onSelect(files => {
-            fileInput.fileToBase64(files[0])
-                .then(data => console.log(data))
-        })
-    </script>
 </body>
 </html>
