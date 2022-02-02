@@ -11,7 +11,7 @@ We have many pre made components that you can use on your websites.
 
 The icons are from Material Icons.
 
-```
+```html
 <button class="gt btn">Button</button>
 <button class="gt btn rounded">Rounded</button>
 <button class="gt btn primary">Primary</button>
@@ -22,7 +22,7 @@ The icons are from Material Icons.
 
 ### Input
 
-```
+```html
 <div class="gt input outlined">
     <i class="icon">search</i>
     <input type="text" placeholder="Search...">
@@ -32,7 +32,7 @@ The icons are from Material Icons.
 
 ### File Input
 
-```
+```html
 <div class="gt file-input">
     <i class="icon">upload_file</i>
     <p>Drag and drop an image file or click to choose</p>
@@ -40,7 +40,7 @@ The icons are from Material Icons.
 </div>
 ```
 
-```
+```js
 let fileInput = new FileInput()
 fileInput.initialize(".gt.file-input", isMultiple = true)
 fileInput.onSelect(files => {
@@ -52,7 +52,7 @@ fileInput.onSelect(files => {
 
 ### Card
 
-```
+```html
 <div class="gt card" style="width: 280px">
     <img style="padding: 24px 24px 0px 24px;" src="https://scontent-frx5-2.xx.fbcdn.net/v/t1.6435-9/p75x225/120195241_100755238470158_7699068114533862023_n.png?_nc_cat=109&ccb=1-5&_nc_sid=09cbfe&_nc_ohc=vBEOKW8IVsQAX9KTwzJ&_nc_ht=scontent-frx5-2.xx&oh=00_AT9ncM5db9WDfI5NP8zRNH-gCogA1EfA-btDmSWUr7AzLQ&oe=621D8F16">
 
@@ -66,5 +66,16 @@ fileInput.onSelect(files => {
 
         <button class="gt btn flat"><i class="icon">download</i></button>
     </div>
+</div>
+```
+
+
+### Switch
+
+```html
+<div class="gt switch">
+    <input type="checkbox">
+    <span class="check"></span>
+    <span class="label">Remember last extracted images</span>
 </div>
 ```
