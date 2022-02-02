@@ -36,5 +36,19 @@
     </div>
 
     <script src="dist/js/gtui.min.js"></script>
+    <script>
+        let dialog = new Dialog()
+            .setTitle('<i class="icon">report_problem</i> Alert')
+            .setContent("Hello, World!")
+            .addButton('Cancel', () => {
+                console.log('Cancel')
+            })
+            .addButton('OK', () => {
+                console.log('OK')
+                dialog.dismiss()
+            })
+            .create()
+        dialog.show()
+    </script>
 </body>
 </html>

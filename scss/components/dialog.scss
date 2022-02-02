@@ -1,0 +1,43 @@
+.gt.dialog {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    z-index: 9999;
+    width: auto;
+    max-width: 90%;
+    min-width: 300px;
+    height: auto;
+    max-height: 90%;
+    transform: translate(-50%, -50%);
+    background: #fff;
+    border-radius: 0.5rem;
+    display: flex;
+    flex-direction: column;
+
+    .title {
+        padding: 24px 24px 0px 24px;
+        line-height: 2.25rem;
+        font-size: 1.875rem;
+        font-weight: bold;
+    }
+
+    .content {
+        padding: 24px;
+    }
+
+    .btns-container {
+        padding: 0 10px 10px 10px;
+        display: flex;
+        justify-content: flex-end;
+    }
+}
+
+.gt.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 9998;
+}

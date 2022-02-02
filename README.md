@@ -79,3 +79,21 @@ fileInput.onSelect(files => {
     <span class="label">Remember last extracted images</span>
 </div>
 ```
+
+
+### Dialog
+
+```js
+let dialog = new Dialog()
+    .setTitle('<i class="icon">report_problem</i> Alert')
+    .setContent("Hello, World!")
+    .addButton('Cancel', () => {
+        console.log('Cancel')
+    })
+    .addButton('OK', () => {
+        console.log('OK')
+        dialog.dismiss()
+    })
+    .create()
+dialog.show()
+```
