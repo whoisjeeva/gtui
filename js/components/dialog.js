@@ -51,7 +51,7 @@ export class Dialog {
 
     hide() {
         this.el.hide()
-        this.overlay.show()
+        this.overlay.hide()
         return this
     }
 
