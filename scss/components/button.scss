@@ -1,15 +1,38 @@
-.gt.btn {
+.paper.btn {
     background-color: $color-gray;
     border: none;
     padding: 10px 20px;
     cursor: pointer;
-    transition: background-color 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
     text-transform: uppercase;
     display: inline-flex;
     color: $color-text;
-    border-radius: 4px;
-    font-weight: bold;
+    
+    &.only-icon {
+        padding: 10px;
 
+        .icon {
+            padding: 0;
+        }
+    }
+
+    span {
+        position: relative;
+        bottom: -2px;
+    }
+
+    &.flat {
+        background-color: transparent;
+
+        &:hover {
+            background-color: $color-gray;
+        }
+    }
+
+    .icon {
+        padding-right: 10px;
+    }
+    
     &.rounded {
         border-radius: 50px;
     }
@@ -19,8 +42,9 @@
         border: 1px solid lighten($color-text, 20%);
 
         &:hover {
-            background-color: transparent;
-            border-color: darken($color-text, 20%);
+            background-color: $color-text;
+            color: #fff;
+            border-color: $color-text;
         }
     }
 
@@ -32,12 +56,12 @@
     }
 
     &.primary {
-        background-color: $color-accent;
+        background-color: $color-text;
         color: $color-primary-btn-fg;
 
         &:hover {
             transition: background-color 0.2s ease-in-out;
-            background-color: darken($color-accent, 5%);
+            background-color: darken($color-text, 5%);
         }
     }
 

@@ -1,4 +1,4 @@
-.gt.file-input {
+.paper.file-input {
     padding: 40px 20px;
     border: 2px dashed $color-text;
     width: 100%;
@@ -22,7 +22,8 @@
     }
 
     &.active {
-        border-color: $color-accent;
-        color: $color-accent;
+        cursor: grabbing;
+        cursor: -moz-grabbing;
+        cursor: -webkit-grabbing;
     }
 }

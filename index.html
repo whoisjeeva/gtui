@@ -24,31 +24,43 @@
 
     <meta name=”robots” content="index, follow">
 
-    <link rel="stylesheet" href="dist/css/gtui.min.css">
+    <link rel="stylesheet" href="dist/css/paperui.min.css">
 </head>
-<body>
+<body style="background-color: #eee;">
     <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);text-align: center;width: 90%;">
-        <div class="gt switch">
-            <input type="checkbox">
-            <span class="check"></span>
-            <span class="label">Remember last extracted images</span>
-        </div>
+        <button class="paper btn only-icon rounded flat">
+            <i class="icon">settings</i>
+        </button>
     </div>
 
-    <script src="dist/js/gtui.min.js"></script>
+    <!-- <div class="paper taskbar">
+        <div class="top-content">
+            <div class="task-count">
+                <span class="current">1</span>
+                /
+                <span class="total">5</span>
+            </div>
+            <span class="sep">•</span>
+            <p>Processing....</p>
+        </div>
+        <div class="progressbar">
+            <div class="progress"></div>
+        </div>
+    </div> -->
+
+    <script src="dist/js/paperui.min.js"></script>
     <script>
-        let dialog = new Dialog()
-            .setTitle('<i class="icon">report_problem</i> Alert')
-            .setContent("Hello, World!")
-            .addButton('Cancel', () => {
-                console.log('Cancel')
-            })
-            .addButton('OK', () => {
-                console.log('OK')
-                dialog.dismiss()
-            })
-            .create()
-        dialog.show()
+        let taskbar = new Taskbar()
+        let current = 1
+        let total = 5
+        let messages = ['Processing', "Verifiying", "Downloading", "Extracting", "Finished"]
+        taskbar.setProgress(current, total, messages[current-1])
+        taskbar.show()
+
+        _(".paper.btn").click(e => {
+            current += 1
+            taskbar.setProgress(current, total, messages[current-1])
+        })
     </script>
 </body>
 </html>

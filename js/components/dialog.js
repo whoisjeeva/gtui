@@ -1,10 +1,10 @@
 export class Dialog {
     constructor(el) {
-        this.overlay = _("<div class='gt overlay'>").hide()
+        this.overlay = _("<div class='paper overlay'>").hide()
         _("body").append(this.overlay)
         this.isBtnContainerAdded = false
         if (el === undefined || el === null) {
-            this.el = _("<div class='gt dialog'>").hide()
+            this.el = _("<div class='paper dialog'>").hide()
             this.isCustom = false
         } else {
             this.el = _(el).hide()
@@ -30,7 +30,7 @@ export class Dialog {
             this.el.append(this.btnsContainer)
             this.isBtnContainerAdded = true
         }
-        let button = _("<button class='gt btn flat'>").text(text)
+        let button = _("<button class='paper btn flat'>").text(text)
         button.on("click", callback)
         this.btnsContainer.append(button)
         return this

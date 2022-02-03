@@ -1,4 +1,4 @@
-.gt.switch {
+.paper.switch {
     cursor: pointer;
     display: inline-flex;
     align-items: center;
@@ -34,7 +34,7 @@
     }
 
     input[type=checkbox]:checked ~ .check {
-        background-color: $color-accent;
+        background-color: $color-text;
     }
 
     .label {

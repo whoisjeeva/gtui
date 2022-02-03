@@ -14,11 +14,11 @@ const buffer      = require('vinyl-buffer')
 
 
 const jsTasks = [
-    {name: "gtui", path: "js/gtui.js", pattern: "js/**/*.js"},
+    {name: "paperui", path: "js/paperui.js", pattern: "js/**/*.js"},
 ]
 
 const sassTasks = [
-    {name: "gtui", path: "scss/gtui.scss", pattern: "scss/**/*.scss"},
+    {name: "paperui", path: "scss/paperui.scss", pattern: "scss/**/*.scss"},
 ]
 
 

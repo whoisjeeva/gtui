@@ -1,6 +1,6 @@
-## Green Tea UI is an UI Library for the Web
+## PaperUI is a UI Library for the Web
 
-Green Tea UI let's you mockup or create your front-end development much easier with built-in UI kit.
+PaperUI let's you mockup or create your front-end development much easier with built-in UI kit.
 
 
 ## Components
@@ -12,20 +12,43 @@ We have many pre made components that you can use on your websites.
 The icons are from Material Icons.
 
 ```html
-<button class="gt btn">Button</button>
-<button class="gt btn rounded">Rounded</button>
-<button class="gt btn primary">Primary</button>
-<button class="gt btn rounded primary">Primary Rounded</button>
-<button class="gt btn outlined rounded">Outlined</button>
-<button class="gt btn primary"><i class="icon">download</i> Download</button>
+<button class="paper btn">Button</button>
+<button class="paper btn rounded">Rounded</button>
+<button class="paper btn primary">Primary</button>
+<button class="paper btn rounded primary">Primary Rounded</button>
+<button class="paper btn outlined rounded">Outlined</button>
+<button class="paper btn primary"><i class="icon">download</i> Download</button>
+<button class="paper btn only-icon rounded">
+    <i class="icon">settings</i>
+</button>
+<button class="paper btn only-icon rounded flat">
+    <i class="icon">settings</i>
+</button>
 ```
 
 ### Input
 
 ```html
-<div class="gt input outlined">
+<div class="paper input outlined">
     <i class="icon">search</i>
     <input type="text" placeholder="Search...">
+</div>
+
+<br><br>
+
+<div class="paper textarea outlined">
+    <textarea name="msg" id="msg" cols="30" rows="10" placeholder="Message..."></textarea>
+</div>
+
+<br><br>
+
+<div class="paper select outlined" style="width: 300px;">
+    <i class="icon">account_circle</i>
+    <select name="ops" id="ops">
+        <option value="1">Option 1</option>
+        <option value="2">Option 2</option>
+        <option value="3">Option 3</option>
+    </select>
 </div>
 ```
 
@@ -33,7 +56,7 @@ The icons are from Material Icons.
 ### File Input
 
 ```html
-<div class="gt file-input">
+<div class="paper file-input">
     <i class="icon">upload_file</i>
     <p>Drag and drop an image file or click to choose</p>
     <p>No max file size</p>            
@@ -42,7 +65,7 @@ The icons are from Material Icons.
 
 ```js
 let fileInput = new FileInput()
-fileInput.initialize(".gt.file-input", isMultiple = true)
+fileInput.initialize(".paper.file-input", isMultiple = true)
 fileInput.onSelect(files => {
     fileInput.fileToBase64(files[0])
         .then(data => console.log(data))
@@ -53,18 +76,18 @@ fileInput.onSelect(files => {
 ### Card
 
 ```html
-<div class="gt card" style="width: 280px">
+<div class="paper card" style="width: 280px">
     <img style="padding: 24px 24px 0px 24px;" src="https://scontent-frx5-2.xx.fbcdn.net/v/t1.6435-9/p75x225/120195241_100755238470158_7699068114533862023_n.png?_nc_cat=109&ccb=1-5&_nc_sid=09cbfe&_nc_ohc=vBEOKW8IVsQAX9KTwzJ&_nc_ht=scontent-frx5-2.xx&oh=00_AT9ncM5db9WDfI5NP8zRNH-gCogA1EfA-btDmSWUr7AzLQ&oe=621D8F16">
 
-    <div class="gt row space-between" style="padding: 10px 24px;border-bottom: 1px solid #eee;">
+    <div class="paper row space-between" style="padding: 10px 24px;border-bottom: 1px solid #eee;">
         <h3>Hello, World</h3>
-        <div class="gt tag">png</div>
+        <div class="paper tag">png</div>
     </div>
 
     <div style="padding: 0 24px 24px 24px;">
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit veniam voluptatum nobis voluptatibus facilis fugiat praesentium asperiores assumenda, id fuga. Quidem nemo quibusdam architecto cum perspiciatis ab molestias accusamus aspernatur!</p>
 
-        <button class="gt btn flat"><i class="icon">download</i></button>
+        <button class="paper btn flat"><i class="icon">download</i></button>
     </div>
 </div>
 ```
@@ -73,7 +96,7 @@ fileInput.onSelect(files => {
 ### Switch
 
 ```html
-<div class="gt switch">
+<div class="paper switch">
     <input type="checkbox">
     <span class="check"></span>
     <span class="label">Remember last extracted images</span>
@@ -96,4 +119,21 @@ let dialog = new Dialog()
     })
     .create()
 dialog.show()
+```
+
+
+### Taskbar
+
+```js
+let taskbar = new Taskbar()
+let current = 1
+let total = 5
+let messages = ['Processing', "Verifiying", "Downloading", "Extracting", "Finished"]
+taskbar.setProgress(current, total, messages[current-1])
+taskbar.show()
+
+_(".paper.btn").click(e => {
+    current += 1
+    taskbar.setProgress(current, total, messages[current-1])
+})
 ```
